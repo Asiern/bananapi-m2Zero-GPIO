@@ -103,7 +103,7 @@ int setPortDirection(const char *id, unsigned int direction)
     if (sprintf(path, "/sys/class/gpio/gpio%s/direction", id) == -1)
     {
         fprintf(stderr, "Error getting path\n");
-        return -1;
+        return ERROR;
     }
 
     // Open file
